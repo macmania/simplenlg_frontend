@@ -10,10 +10,10 @@ myApp.controller('subjectVerbObjectController',['$scope', '$http', function($sco
 		if(sentence.verbTense == null){
 			sentence.verbTense = "present";
 		}
-		delete $http.defaults.headers.common['X-Requested-With'];
+
 		$http({
 			method: 'POST', 
-			url: "https://simplenlg-features.herokuapp.com/generate-sentence", 
+			url: "http://localhost:5000/generate-sentence", 
 			data: {
 				"subject": sentence.subject, 
 				"verb": sentence.verb, 
@@ -23,6 +23,7 @@ myApp.controller('subjectVerbObjectController',['$scope', '$http', function($sco
 			}, 
 		})
 		.success(function(data){
+			$scope.resultSentence = data
 			console.log(data)
 		});
 	}
