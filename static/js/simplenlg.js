@@ -13,7 +13,7 @@ myApp.controller('subjectVerbObjectController',['$scope', '$http', function($sco
 
 		$http({
 			method: 'POST', 
-			url: "http://localhost:5000/generate-sentence", 
+			url: "https://simplenlg-features.herokuapp.com/generate-sentence", 
 			data: {
 				"subject": sentence.subject, 
 				"verb": sentence.verb, 
