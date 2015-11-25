@@ -18,6 +18,13 @@ myApp.controller('subjectVerbObjectController',['$scope', '$http', function($sco
 			sentence.subject = "I";
 		}
 
+		/**
+		    "isProgressive" : "True", 
+	    	"isModel": "False", 
+	    	"isParticiple": "False", 
+	    	"isPerfect": "False", 
+	    	"isPassive": "False"
+		**/
 		$http({
 			method: 'POST', 
 			url: "https://simplenlg-features.herokuapp.com/generate-sentence", 
@@ -27,6 +34,11 @@ myApp.controller('subjectVerbObjectController',['$scope', '$http', function($sco
 				"object": sentence.objectStr, 
 				"typeSentence": "SubjectVerbObject", 
 				"verbTense": sentence.verbTense,
+				"isProgressive": sentence.isProgressive, 
+				"isModel": sentence.isModel, 
+				"isParticiple": sentence.isParticiple, 
+				"isPerfect": sentence.isPerfect,
+				"isPassive": sentence.isPassive
 			}, 
 			headers: { 
 				'negateSentence': sentence.negated
