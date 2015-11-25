@@ -46,7 +46,8 @@ myApp.controller('subjectVerbObjectController',['$scope', '$http', function($sco
 				"isModel": sentence.isModel, 
 				"isParticiple": sentence.isParticiple, 
 				"isPerfect": sentence.isPerfect,
-				"isPassive": sentence.isPassive
+				"isPassive": sentence.isPassive, 
+				"negateSentence": sentence.negated 
 			}
 		})
 		.success(function(data){
