@@ -29,6 +29,9 @@ myApp.controller('subjectVerbObjectController',['$scope', '$http', function($sco
 		if(sentence.isPassive == null){
 			sentence.isPassive = "False";
 		}
+		if (sentence.isPerfect == null){
+			sentence.isPerfect = "False";
+		}
 
 		$http({
 			method: 'POST', 
