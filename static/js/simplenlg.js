@@ -18,16 +18,16 @@ myApp.controller('subjectVerbObjectController',['$scope', '$http', function($sco
 			sentence.subject = "I";
 		}
 		if(sentence.isProgressive == null) {
-			sentence.isProgressive = false;
+			sentence.isProgressive = "False";
 		}
 		if(sentence.isModel == null){
-			sentence.isModel = false;
+			sentence.isModel = "False";
 		}
 		if(sentence.isParticiple == null){
-			sentence.isParticiple = false;
+			sentence.isParticiple = "False";
 		}
 		if(sentence.isPassive == null){
-			sentence.isPassive = false;
+			sentence.isPassive = "False";
 		}
 
 		$http({
