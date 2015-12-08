@@ -3,6 +3,25 @@ var myApp = angular.module('simpleNLGApp', []);
 
 
 myApp.controller('subjectVerbObjectController',['$scope', '$http', function($scope, $http){
+	$scope.optionWordFormTypes = [
+		{
+			'action': 'set indirect object',
+			'description': 'add an indirect object'
+		},
+		{
+			'action': 'set modifier',
+			'description': 'set an adjective'
+		},
+		{
+			'action': 'add complement',
+			'description': 'something here'
+		},
+		{
+			'action': 'add premodifier',
+			'description': 'something here'
+		}
+	]
+
 	$scope.submit = function(sentence){
 		if(sentence == null){
 			return;
