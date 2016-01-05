@@ -17,10 +17,35 @@ myApp.controller('subjectVerbObjectController',['$scope', '$http', function($sco
 			'description': 'something here'
 		},
 		{
-			'action': 'Add Premodifier, i.e. Even,
+			'action': 'Add Premodifier, i.e. Even,',
 			'description': 'something here'
 		}
 	]
+	//checks to see what type of noun it is then based on the output, we'll determine what kinds of determiners
+	//will be added to the noun, if any
+	$scope.isValidNoun = function(noun){
+		$http({
+			method: 'POST',
+			url: "http://localhost:5000/get-noun-type",
+			data: {
+				"noun": noun,
+			},
+		})
+			.success(function(data){
+				$scope.result = data //this gives you 2 values.
+			});
+	}
+	//returns the valid determiners based on the noun type
+	$scope.getDeterminersValid = function(nounType){
+		if(nounType == "NN"){ //if it's a noun
+
+		} else if(nounType == "NNS"){
+
+		} else {
+			return;
+		}
+	}
+
 
 	$scope.submit = function(sentence){
 		if(sentence == null){
