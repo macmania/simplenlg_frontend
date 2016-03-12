@@ -35,7 +35,7 @@ myApp.controller('subjectVerbObjectController',['$scope', '$http', function($sco
 
 		$http({
 			method: 'POST', 
-			url: "https://simplenlg-features.herokuapp.com/generate-sentence", 
+			url: "http://ec2-52-91-254-222.compute-1.amazonaws.com:4567/generate-sentence", 
 			data: {
 				"subject": sentence.subject, 
 				"verb": sentence.verb, 
@@ -150,7 +150,7 @@ myApp.controller('questionSentenceController', ['$scope', '$http', function($sco
 	$scope.submit = function(sentence, questionType){
 		$http({
 			method: 'POST', 
-			url: "https://simplenlg-features.herokuapp.com/generate-question",
+			url: "http://ec2-52-91-254-222.compute-1.amazonaws.com:4567/generate-question",
 			data: {
 				"typeQuestion": questionType,
 				"subject": sentence.subject, 
