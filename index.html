@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
                 <script src="static/js/simplenlg.js"></script>
                 <script type="text/javascript">
+	//backend is not serve on https
     //            	var host = "macmania.github.io";
     //                if ((host == window.location.host) && (window.location.protocol != "https:"))
 				// 		window.location.protocol = "https";
@@ -70,7 +71,7 @@
 								</div>
 							</div>
 
-							<div class="form-group"><label class="col-sm-2">Is verb model?</label>
+							<div class="form-group"><label class="col-sm-2">Is verb modal?</label>
 								<div class="col-sm-10" ng-init="sentence.isModel=False">
 									<label class="col-sm-5" style="padding-right:3%;">True 
 										<input type="radio" ng-model="sentence.isModel" value="True">
@@ -109,7 +110,7 @@
 								</div>
 							</div>
 
-							<div class="form-group"><label class="col-sm-2">Negate?</label>
+							<div class="form-group"><label class="col-sm-2">Negated?</label>
 								<div class="col-sm-10" ng-init="sentence.negated=False">
 									<label class="col-sm-5">True 
 										<input type="radio" ng-model="sentence.negated" value="True"></input>
